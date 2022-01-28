@@ -2,7 +2,7 @@ package com.zhengyinuo.easyreportexample.app
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
-import com.zhengyinuo.easyreport.memory.core.EasyApp
+import com.zhengyinuo.easyreport.app.EasyApp
 import com.zhengyinuo.easyreport.memory.entity.MemoryEntity
 import com.zhengyinuo.easyreportexample.util.AppUtil
 import leakcanary.EventListener
@@ -30,7 +30,7 @@ class MyApp: Application() {
                                 this.content = it.leakTraces.toString()
                             }
                         }
-                        EasyApp.instance.report(datas)
+                        EasyApp.instance.reportLeak(datas)
                     }
                 }
             )

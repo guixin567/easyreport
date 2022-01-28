@@ -1,4 +1,4 @@
-package com.zhengyinuo.easyreport.memory.core
+package com.zhengyinuo.easyreport.app
 
 import android.util.Log
 import com.google.gson.Gson
@@ -20,7 +20,8 @@ class EasyApp private constructor(){
         }
     }
 
-    fun report(datas : List<MemoryEntity>) {
+    //上报内存泄漏数据
+    fun reportLeak(datas : List<MemoryEntity>) {
         val reportEntity = ReportEntity<List<MemoryEntity>>()
 
         reportEntity.datas = datas
