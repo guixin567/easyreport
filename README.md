@@ -44,7 +44,7 @@ LeakCanary.config = LeakCanary.config.run {
                                 this.content = it.leakTraces.toString()
                             }
                         }
-						//将泄漏的数据上报到后台
+//将泄漏的数据上报到后台
                         EasyApp.instance.reportLeak(datas)
                     }
                 }
